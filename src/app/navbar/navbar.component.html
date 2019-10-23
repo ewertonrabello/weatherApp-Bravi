@@ -1,0 +1,12 @@
+<div class="app-navbar">
+	<p>weather in your city</p>
+	<input
+		type="text"
+		placeholder="Your city name"
+		#city
+		(keyup.enter)="search(city)"
+	>
+	<span (click)="search(city)">
+		<i class="icon ion-search"></i>
+	</span>
+</div>

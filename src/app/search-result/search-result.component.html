@@ -1,0 +1,31 @@
+<ul>
+	<li *ngFor="let item of items">
+		<div class="temperature-current">{{item.currentTemperature}}ºC</div>
+		<div class="description">
+			<div>
+				<h1>{{item.city}}, {{item.country}}</h1>
+				<img
+					class="flag"
+					src="https://openweathermap.org/images/flags/{{item.country.toLowerCase()}}.png"
+					alt="Flag {{item.country}}"
+				>
+			</div>
+			<div>
+				<span class="temperature-label">Máx</span>
+				<b class="temperature-max">{{item.maxTemperature}} ºC</b>
+			</div>
+			<div>
+				<span class="temperature-label">Mín</span>
+				<b class="temperature-min">{{item.minTemperature}} ºC</b>
+			</div>
+		</div>
+		<div class="weather">
+			<img
+				class="weather__icon"
+				src="https://openweathermap.org/img/w/{{item.icon}}.png"
+				alt="{{item.description}}"
+			>
+			<span class="weather__description">{{item.description}}</span>
+		</div>
+	</li>
+</ul>
